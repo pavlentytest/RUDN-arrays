@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -79,5 +80,38 @@ public class Main {
         1 2 3 4 5 6 7 8 9 10
                   15 14 13 12 11
                   */
+        System.out.println();
+
+       int[] ff = {5,9,2,2,1,-345,0};
+
+       for(int i=ff.length-1;i>=0;i--) {
+           System.out.print(ff[i] + " ");
+       }
+
+       System.out.println(Arrays.toString(ff));
+
+       int matr[][] = new int[10][10];
+       int count=0;
+
+       for(int i=0;i<10;i++) {
+           if(i%2 == 0) {
+               for (int j = 0; j < 10; j++) {
+                   count++;
+                   matr[i][j] = count;
+               }
+           } else {
+               for (int j = 9; j >= 0; j--) {
+                   count++;
+                   matr[i][j] = count;
+               }
+           }
+       }
+        for(int i=0;i<matr.length;i++) {
+            for(int j=0;j<matr[i].length;j++) {
+                System.out.printf("%4d",matr[i][j]);
+            }
+            System.out.println();
+        }
+
     }
 }
